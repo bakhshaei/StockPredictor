@@ -1,2 +1,2 @@
 # StockPredictor
-This is a self-training project to learn and practice ML techniques and expand my personal experiences.
+This self-training project serves as a platform for acquiring and applying machine learning techniques, thereby augmenting my personal knowledge and practical experience in the field.
