@@ -12,6 +12,8 @@ This self-training project serves as a platform for acquiring and applying machi
 5. [Feature Engineering Techniques](#feature-engineering-techniques)
 6. [Model Training and Evaluation](#model-training-and-evaluation)
 7. [Conclusion](#conclusion)
+8. [Suggestion](#suggestion)
+
 
 ## Introduction
 
@@ -438,3 +440,12 @@ It's important to note that this model should be used as one of many tools in a 
 
 *To be continued!*
 [This section may be changed overtime while testing various solutions.]
+
+
+## Suggestion
+Here are list of some suggestions (changes/add/remove) about the approach:
+
+ * Do normalization after splitting dues to prevent leakange.
+ * Normalize price columns with one instance to preserve Domain Knowledge. (For example create an instance and fit with *Clsoe* price, then use that instance to transform all other price columns, e.g. *open, High, Low, Lookback*).
+ * Use percentage changes (*Close[t] / Close[t-1] - 1*) instead of raw prices. These tend to have more consistent distributions over time. 
+ 
