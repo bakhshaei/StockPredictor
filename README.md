@@ -443,9 +443,10 @@ It's important to note that this model should be used as one of many tools in a 
 
 
 ## Suggestion
-Here are list of some suggestions (changes/add/remove) about the approach:
+ Here are a list of some suggestions (changes/add/remove) about the approach:
 
- * Do normalization after splitting dues to prevent leakange.
- * Normalize price columns with one instance to preserve Domain Knowledge. (For example create an instance and fit with *Clsoe* price, then use that instance to transform all other price columns, e.g. *open, High, Low, Lookback*).
+ * Do normalization after splitting due to prevent leakage.
+ * Normalize price columns with one instance to preserve Domain Knowledge. (For example, create an instance and fit with *Close* price, then use that instance to transform all other price columns, e.g. *open, High, Low, Lookback*).
  * Use percentage changes (*Close[t] / Close[t-1] - 1*) instead of raw prices. These tend to have more consistent distributions over time. 
+ * It's common in time series analysis to build models that instead of predicting the next value, predict how the value will change in the next time step. Similarly, [residual networks](https://arxiv.org/abs/1512.03385) —or ResNets—in deep learning refer to architectures where each layer adds to the model's accumulating result
  
